@@ -65,3 +65,6 @@ typings/
 
 # Serverless directories
 .serverless
+
+# Readme
+README.md
