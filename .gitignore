@@ -68,4 +68,9 @@ typings/
 
 # Readme
 README.md
+
+# Credentials
 variables.env
+
+# Data
+data.json
