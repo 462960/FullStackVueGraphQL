@@ -1,0 +1,27 @@
+type User {
+  _id: ID
+  username: String! @unique #   Exclamation ! means required
+  email: String!
+  password: String!
+  avatar: String
+  joinDate: String #   There is no type of Date in graphQL
+  favorites: [Post]
+}
+
+type Post {
+  title: String!
+  imgUrl: String!
+  categories: [String]!
+  description: Srting!
+  createdDate: String
+  likes: Int
+  createdBy: User!
+  messages: [Message]
+}
+
+type Message {
+  _id: ID
+  messageBody: String!
+  messageDate: String
+  messageUser: User!
+}
