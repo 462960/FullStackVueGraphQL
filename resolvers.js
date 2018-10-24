@@ -1,6 +1,15 @@
 module.exports = {
   Query: {
-    getUser: () => null
+    getPosts: async (_, args, { Post }) => {
+      const posts = Post.find({})
+        .sort({ createdDate: "desc" })
+        .populate({
+          path: "createdBy",
+          model: "User"
+        });
+
+      return posts;
+    }
   },
 
   Mutation: {
